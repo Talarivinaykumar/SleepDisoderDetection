@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sleep Disorder Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">Sleep Analysis</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/predict">Predict</a></li>
+                <li><a href="/analysis">Prediction Analysis</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <!-- Left Side - Animated Doctor Illustration -->
+            <div class="hero-left slide-in-left">
+                <div class="doctor-illustration">
+                    <img src="{{ url_for('static', filename='images/doctor.svg') }}" alt="AI Doctor"
+                        class="floating-animation">
+                </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="hero-right slide-in-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Machine Learning based Healthcare Solution
+                </div>
+                <h1 class="hero-title">
+                    ML Powered Sleep<br>
+                    <span class="gradient-text">Disorder Prediction</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Advanced Machine Learning Based Medical Decision Support System
+                </p>
+                <p class="hero-description">
+                    Leveraging cutting-edge Random Forest algorithms to analyze sleep patterns,
+                    vital signs, and lifestyle factors for accurate sleep disorder detection.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Predictions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Available</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="/predict" class="btn btn-primary">
+                        <span>Start Analysis</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="/about" class="btn btn-secondary">
+                        <span>About Project</span>
+                    </a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔬</div>
+                        <div class="feature-text">ML-Powered Analysis</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text">Instant Results</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">Secure & Private</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECG Line Animation -->
+    <div class="ecg-line">
+        <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <polyline fill="none" stroke="url(#gradient)" stroke-width="2"
+                points="0,50 100,50 120,20 140,80 160,50 200,50 220,30 240,70 260,50 1000,50" />
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0" />
+                    <stop offset="50%" style="stop-color:#00d4ff;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

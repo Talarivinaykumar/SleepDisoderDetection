@@ -1,0 +1,181 @@
+Person ID,Gender,Age,Occupation,Sleep Duration,Quality of Sleep,Physical Activity Level,Stress Level,BMI Category,Blood Pressure,Heart Rate,Daily Steps,Sleep Disorder
+1,Female,32,Nurse,4.5,4,40,9,Overweight,135/85,85,4500,Insomnia
+2,Female,34,Accountant,5.0,4,45,8,Normal,132/84,82,4200,Insomnia
+3,Male,38,Lawyer,4.8,3,30,9,Normal,138/88,86,3800,Insomnia
+4,Female,36,Teacher,5.2,5,50,8,Overweight,130/82,80,4800,Insomnia
+5,Male,40,Engineer,4.2,3,35,10,Normal,140/90,90,3500,Insomnia
+6,Female,33,Nurse,4.6,4,40,9,Overweight,136/86,84,4600,Insomnia
+7,Male,39,Lawyer,4.9,4,30,8,Normal,134/85,83,3900,Insomnia
+8,Female,35,Teacher,5.1,5,50,9,Overweight,138/88,88,4700,Insomnia
+9,Male,41,Engineer,4.4,3,35,10,Normal,142/91,92,3600,Insomnia
+10,Female,37,Accountant,4.7,4,45,8,Normal,133/84,85,4300,Insomnia
+11,Male,34,Lawyer,5.0,4,30,9,Normal,137/87,87,3700,Insomnia
+12,Female,32,Teacher,5.3,5,50,8,Overweight,131/83,81,4900,Insomnia
+13,Male,38,Engineer,4.5,3,35,10,Normal,141/90,91,3400,Insomnia
+14,Female,36,Nurse,4.8,4,40,9,Overweight,135/85,86,4500,Insomnia
+15,Male,40,Lawyer,5.1,4,30,8,Normal,134/86,84,3800,Insomnia
+16,Female,34,Teacher,4.6,5,50,9,Overweight,139/89,89,4600,Insomnia
+17,Male,39,Engineer,4.3,3,35,10,Normal,143/92,93,3500,Insomnia
+18,Female,33,Accountant,4.9,4,45,8,Normal,132/84,83,4400,Insomnia
+19,Male,35,Lawyer,5.2,4,30,9,Normal,138/88,88,3600,Insomnia
+20,Female,37,Teacher,4.7,5,50,8,Overweight,130/82,82,4800,Insomnia
+21,Male,50,Manager,5.5,5,30,7,Obese,150/98,95,3000,Sleep Apnea
+22,Male,55,Engineer,6.0,4,35,6,Obese,148/96,92,3500,Sleep Apnea
+23,Female,48,Teacher,5.8,5,40,8,Overweight,146/95,90,4000,Sleep Apnea
+24,Male,60,Doctor,5.2,4,30,7,Obese,155/100,98,2800,Sleep Apnea
+25,Female,52,Nurse,6.2,5,45,6,Overweight,145/95,88,4200,Sleep Apnea
+26,Male,51,Manager,5.6,5,30,8,Obese,152/99,96,3100,Sleep Apnea
+27,Male,56,Engineer,6.1,4,35,7,Obese,149/97,93,3600,Sleep Apnea
+28,Female,49,Teacher,5.9,5,40,6,Overweight,147/95,91,4100,Sleep Apnea
+29,Male,61,Doctor,5.3,4,30,8,Obese,156/102,99,2900,Sleep Apnea
+30,Female,53,Nurse,6.3,5,45,7,Overweight,145/96,89,4300,Sleep Apnea
+31,Male,52,Manager,5.7,5,30,6,Obese,148/96,94,3200,Sleep Apnea
+32,Male,57,Engineer,6.2,4,35,8,Obese,151/98,95,3700,Sleep Apnea
+33,Female,50,Teacher,6.0,5,40,7,Overweight,146/95,92,4200,Sleep Apnea
+34,Male,62,Doctor,5.4,4,30,6,Obese,154/99,97,3000,Sleep Apnea
+35,Female,54,Nurse,6.4,5,45,8,Overweight,147/97,90,4400,Sleep Apnea
+36,Male,53,Manager,5.8,5,30,7,Obese,150/97,95,3300,Sleep Apnea
+37,Male,58,Engineer,6.3,4,35,6,Obese,153/100,96,3800,Sleep Apnea
+38,Female,51,Teacher,6.1,5,40,8,Overweight,148/96,93,4300,Sleep Apnea
+39,Male,63,Doctor,5.5,4,30,7,Obese,157/104,100,3100,Sleep Apnea
+40,Female,55,Nurse,6.5,5,45,6,Overweight,146/95,91,4500,Sleep Apnea
+41,Female,28,Teacher,6.5,6,60,6,Normal,120/80,75,6000,Restless Legs Syndrome
+42,Male,35,Software Engineer,6.8,6,65,5,Normal,122/82,78,6500,Restless Legs Syndrome
+43,Female,30,Nurse,6.2,5,55,7,Normal,118/78,72,5800,Restless Legs Syndrome
+44,Male,40,Doctor,7.0,7,70,5,Normal,125/82,80,7000,Restless Legs Syndrome
+45,Female,32,Accountant,6.4,6,60,6,Normal,115/75,74,6200,Restless Legs Syndrome
+46,Male,36,Software Engineer,6.9,6,65,5,Normal,124/84,79,6600,Restless Legs Syndrome
+47,Female,29,Teacher,6.6,6,60,6,Normal,121/81,76,6100,Restless Legs Syndrome
+48,Male,41,Doctor,7.1,7,70,5,Normal,123/81,81,7100,Restless Legs Syndrome
+49,Female,33,Nurse,6.3,5,55,7,Normal,119/79,73,5900,Restless Legs Syndrome
+50,Male,38,Software Engineer,6.7,6,65,6,Normal,125/85,77,6400,Restless Legs Syndrome
+51,Female,31,Accountant,6.5,6,60,5,Normal,116/76,75,6300,Restless Legs Syndrome
+52,Male,42,Doctor,7.2,7,70,6,Normal,124/82,82,7200,Restless Legs Syndrome
+53,Female,30,Teacher,6.8,6,60,5,Normal,122/82,78,6200,Restless Legs Syndrome
+54,Male,37,Software Engineer,6.6,6,65,7,Normal,120/80,76,6700,Restless Legs Syndrome
+55,Female,34,Nurse,6.4,5,55,6,Normal,117/77,74,6000,Restless Legs Syndrome
+56,Male,43,Doctor,6.9,7,70,5,Normal,126/84,83,7300,Restless Legs Syndrome
+57,Female,32,Accountant,6.7,6,60,6,Normal,118/78,77,6400,Restless Legs Syndrome
+58,Male,39,Software Engineer,6.5,6,65,5,Normal,121/81,75,6500,Restless Legs Syndrome
+59,Female,31,Teacher,6.9,6,60,7,Normal,123/83,79,6300,Restless Legs Syndrome
+60,Male,44,Doctor,7.0,7,70,6,Normal,125/83,80,7400,Restless Legs Syndrome
+61,Male,26,Student,3.0,3,20,10,Normal,135/88,100,2000,Severe Sleep Deprivation
+62,Female,30,Lawyer,2.5,2,10,10,Normal,140/90,105,1500,Severe Sleep Deprivation
+63,Male,35,Engineer,3.2,3,25,9,Overweight,138/89,95,2500,Severe Sleep Deprivation
+64,Female,28,Accountant,2.8,2,15,10,Overweight,136/88,102,1800,Severe Sleep Deprivation
+65,Male,40,Sales,3.4,3,30,9,Normal,132/85,92,2800,Severe Sleep Deprivation
+66,Female,32,Lawyer,2.6,2,10,10,Normal,142/92,108,1600,Severe Sleep Deprivation
+67,Male,27,Student,3.1,3,20,9,Normal,134/87,98,2100,Severe Sleep Deprivation
+68,Female,29,Accountant,2.9,2,15,10,Overweight,138/90,104,1900,Severe Sleep Deprivation
+69,Male,36,Engineer,3.3,3,25,10,Overweight,140/92,97,2600,Severe Sleep Deprivation
+70,Female,31,Lawyer,2.7,2,10,9,Normal,136/88,106,1700,Severe Sleep Deprivation
+71,Male,41,Sales,3.5,3,30,10,Normal,134/86,94,2900,Severe Sleep Deprivation
+72,Female,33,Accountant,2.4,2,15,9,Overweight,140/90,100,1400,Severe Sleep Deprivation
+73,Male,28,Student,3.2,3,20,10,Normal,136/89,102,2200,Severe Sleep Deprivation
+74,Female,30,Lawyer,2.8,2,10,10,Normal,144/94,110,1800,Severe Sleep Deprivation
+75,Male,37,Engineer,3.4,3,25,9,Overweight,138/90,96,2700,Severe Sleep Deprivation
+76,Female,32,Accountant,3.0,2,15,10,Overweight,140/92,105,2000,Severe Sleep Deprivation
+77,Male,42,Sales,3.6,3,30,9,Normal,135/87,91,3000,Severe Sleep Deprivation
+78,Female,34,Lawyer,2.5,2,10,10,Normal,146/96,112,1500,Severe Sleep Deprivation
+79,Male,29,Student,3.3,3,20,9,Normal,137/88,99,2300,Severe Sleep Deprivation
+80,Female,31,Accountant,2.9,2,15,10,Overweight,142/92,108,1900,Severe Sleep Deprivation
+81,Female,45,Scientist,10.0,7,20,3,Normal,115/75,65,2000,Hypersomnia
+82,Male,35,Writer,9.5,6,15,4,Overweight,118/76,68,2500,Hypersomnia
+83,Female,50,Artist,11.0,8,10,2,Normal,112/72,60,1500,Hypersomnia
+84,Male,40,Unemployed,10.5,7,25,3,Overweight,120/78,70,3000,Hypersomnia
+85,Female,38,Scientist,9.8,6,20,4,Normal,114/74,66,2200,Hypersomnia
+86,Male,36,Writer,9.6,7,15,3,Overweight,119/77,69,2600,Hypersomnia
+87,Female,51,Artist,11.5,8,10,2,Normal,110/70,58,1600,Hypersomnia
+88,Male,41,Unemployed,10.2,6,25,4,Overweight,122/80,72,3100,Hypersomnia
+89,Female,46,Scientist,10.5,8,20,2,Normal,116/76,64,2100,Hypersomnia
+90,Male,37,Writer,9.7,6,15,5,Overweight,117/75,67,2700,Hypersomnia
+91,Female,52,Artist,11.2,7,10,3,Normal,113/73,62,1700,Hypersomnia
+92,Male,42,Unemployed,10.8,8,25,2,Overweight,120/78,71,3200,Hypersomnia
+93,Female,39,Scientist,9.9,6,20,4,Normal,115/75,65,2300,Hypersomnia
+94,Male,38,Writer,9.8,7,15,3,Overweight,118/76,68,2800,Hypersomnia
+95,Female,53,Artist,12.0,8,10,2,Normal,111/71,59,1800,Hypersomnia
+96,Male,43,Unemployed,10.4,6,25,4,Overweight,123/81,73,3300,Hypersomnia
+97,Female,47,Scientist,10.2,7,20,3,Normal,117/77,63,2400,Hypersomnia
+98,Male,39,Writer,9.9,8,15,2,Overweight,116/74,66,2900,Hypersomnia
+99,Female,54,Artist,11.8,7,10,4,Normal,114/74,61,1900,Hypersomnia
+100,Male,44,Unemployed,10.6,8,25,3,Overweight,121/79,70,3400,Hypersomnia
+101,Male,30,Software Engineer,8.0,8,75,3,Normal,115/75,65,8000,No Sleep Disorder
+102,Female,28,Teacher,7.8,7,70,4,Normal,118/78,68,7500,No Sleep Disorder
+103,Male,35,Doctor,8.2,8,80,2,Normal,112/72,62,8500,No Sleep Disorder
+104,Female,40,Accountant,7.6,7,65,3,Normal,120/80,70,7000,No Sleep Disorder
+105,Male,45,Lawyer,8.5,9,85,2,Normal,110/70,60,9000,No Sleep Disorder
+106,Female,29,Teacher,7.9,8,70,3,Normal,116/76,66,7600,No Sleep Disorder
+107,Male,36,Doctor,8.3,9,80,1,Normal,111/71,61,8600,No Sleep Disorder
+108,Female,41,Accountant,7.7,7,65,4,Normal,119/79,69,7100,No Sleep Disorder
+109,Male,46,Lawyer,8.6,8,85,2,Normal,113/73,63,9100,No Sleep Disorder
+110,Male,31,Software Engineer,8.1,8,75,3,Normal,114/74,64,8100,No Sleep Disorder
+111,Female,30,Teacher,7.8,7,70,4,Normal,117/77,67,7700,No Sleep Disorder
+112,Male,37,Doctor,8.4,9,80,2,Normal,110/70,60,8700,No Sleep Disorder
+113,Female,42,Accountant,7.5,7,65,3,Normal,121/81,71,6900,No Sleep Disorder
+114,Male,47,Lawyer,8.7,8,85,1,Normal,112/72,62,9200,No Sleep Disorder
+115,Male,32,Software Engineer,8.2,9,75,2,Normal,113/73,63,8200,No Sleep Disorder
+116,Female,31,Teacher,7.9,8,70,3,Normal,116/76,66,7800,No Sleep Disorder
+117,Male,38,Doctor,8.5,8,80,2,Normal,111/71,61,8800,No Sleep Disorder
+118,Female,43,Accountant,7.6,7,65,4,Normal,120/80,70,7200,No Sleep Disorder
+119,Male,48,Lawyer,8.8,9,85,1,Normal,109/69,59,9300,No Sleep Disorder
+120,Male,33,Software Engineer,8.0,8,75,3,Normal,115/75,65,8300,No Sleep Disorder
+121,Male,24,Engineer,7.5,5,50,3,Normal,115/75,70,8200,No Sleep Disorder
+122,Female,27,Engineer,7.8,5,50,2,Normal,110/72,68,9000,No Sleep Disorder
+123,Male,30,Engineer,7.2,5,50,4,Normal,118/76,72,7800,No Sleep Disorder
+124,Female,35,Engineer,7.6,5,50,3,Normal,112/74,69,8500,No Sleep Disorder
+125,Male,29,Engineer,7.4,5,50,3,Normal,116/75,71,8000,No Sleep Disorder
+126,Female,26,Engineer,7.7,5,50,2,Normal,111/73,67,8700,No Sleep Disorder
+127,Male,31,Engineer,7.3,5,50,4,Normal,117/76,72,7600,No Sleep Disorder
+128,Female,28,Engineer,7.5,5,50,3,Normal,113/74,70,8400,No Sleep Disorder
+129,Male,33,Engineer,7.6,5,50,3,Normal,115/75,69,8200,No Sleep Disorder
+130,Female,25,Engineer,7.8,5,50,2,Normal,110/72,68,9000,No Sleep Disorder
+131,Female,40,Engineer,5.1,5,50,9,Normal,138/90,90,3000,Insomnia
+132,Male,45,Engineer,4.9,5,50,8,Normal,135/88,88,2800,Insomnia
+133,Female,38,Engineer,5.2,5,50,9,Normal,137/89,92,3200,Insomnia
+134,Male,42,Engineer,4.8,5,50,10,Normal,136/88,95,2500,Insomnia
+135,Female,36,Engineer,5.0,5,50,9,Normal,138/90,89,3100,Insomnia
+136,Male,41,Engineer,5.1,5,50,8,Normal,137/89,90,3000,Insomnia
+137,Female,39,Engineer,4.7,5,50,10,Normal,139/90,96,2600,Insomnia
+138,Male,43,Engineer,4.9,5,50,9,Normal,138/89,92,2800,Insomnia
+139,Female,37,Engineer,5.0,5,50,8,Normal,137/88,89,3000,Insomnia
+140,Male,44,Engineer,4.8,5,50,10,Normal,139/90,95,2500,Insomnia
+141,Male,55,Engineer,5.6,5,50,5,Normal,150/95,85,3500,Sleep Apnea
+142,Female,60,Engineer,5.4,5,50,5,Normal,155/98,88,3000,Sleep Apnea
+143,Male,52,Engineer,5.8,5,50,6,Normal,148/92,84,4000,Sleep Apnea
+144,Female,65,Engineer,5.3,5,50,5,Normal,160/100,90,2800,Sleep Apnea
+145,Male,58,Engineer,5.7,5,50,6,Normal,152/94,87,3800,Sleep Apnea
+146,Female,62,Engineer,5.5,5,50,5,Normal,158/99,89,3200,Sleep Apnea
+147,Male,50,Engineer,5.9,5,50,6,Normal,147/91,83,4200,Sleep Apnea
+148,Female,63,Engineer,5.4,5,50,5,Normal,160/102,90,3100,Sleep Apnea
+149,Male,57,Engineer,5.6,5,50,6,Normal,150/95,86,3700,Sleep Apnea
+150,Female,59,Engineer,5.5,5,50,5,Normal,152/96,88,3400,Sleep Apnea
+151,Female,28,Engineer,6.5,5,50,6,Normal,118/78,75,7500,Restless Legs Syndrome
+152,Male,34,Engineer,6.3,5,50,5,Normal,120/80,78,8000,Restless Legs Syndrome
+153,Female,31,Engineer,6.7,5,50,6,Normal,115/76,74,8200,Restless Legs Syndrome
+154,Male,36,Engineer,6.4,5,50,6,Normal,122/82,77,7800,Restless Legs Syndrome
+155,Female,29,Engineer,6.6,5,50,5,Normal,112/72,73,8500,Restless Legs Syndrome
+156,Male,32,Engineer,6.5,5,50,6,Normal,118/78,76,7900,Restless Legs Syndrome
+157,Female,35,Engineer,6.3,5,50,5,Normal,120/80,77,8100,Restless Legs Syndrome
+158,Male,30,Engineer,6.6,5,50,6,Normal,116/77,74,8300,Restless Legs Syndrome
+159,Female,33,Engineer,6.4,5,50,5,Normal,119/79,75,8000,Restless Legs Syndrome
+160,Male,27,Engineer,6.7,5,50,6,Normal,115/76,73,8500,Restless Legs Syndrome
+161,Male,22,Engineer,3.5,5,50,9,Normal,135/90,95,4000,Severe Sleep Deprivation
+162,Female,25,Engineer,4.0,5,50,10,Normal,140/92,98,3000,Severe Sleep Deprivation
+163,Male,27,Engineer,3.8,5,50,9,Normal,138/89,92,3500,Severe Sleep Deprivation
+164,Female,24,Engineer,4.2,5,50,8,Normal,132/88,90,4200,Severe Sleep Deprivation
+165,Male,23,Engineer,3.9,5,50,9,Normal,136/91,94,3800,Severe Sleep Deprivation
+166,Female,26,Engineer,3.7,5,50,10,Normal,140/92,97,3100,Severe Sleep Deprivation
+167,Male,28,Engineer,3.6,5,50,9,Normal,138/90,93,3600,Severe Sleep Deprivation
+168,Female,21,Engineer,4.1,5,50,8,Normal,132/88,90,4000,Severe Sleep Deprivation
+169,Male,25,Engineer,3.8,5,50,9,Normal,137/89,92,3500,Severe Sleep Deprivation
+170,Female,24,Engineer,4.0,5,50,10,Normal,140/92,98,3000,Severe Sleep Deprivation
+171,Male,24,Engineer,9.5,5,50,3,Normal,115/75,68,3000,Hypersomnia
+172,Female,29,Engineer,10.0,5,50,2,Normal,110/70,65,2800,Hypersomnia
+173,Male,32,Engineer,9.2,5,50,3,Normal,118/78,70,3500,Hypersomnia
+174,Female,27,Engineer,9.8,5,50,2,Normal,112/72,66,3200,Hypersomnia
+175,Male,35,Engineer,9.4,5,50,3,Normal,117/76,69,3400,Hypersomnia
+176,Female,30,Engineer,9.6,5,50,2,Normal,110/70,65,3000,Hypersomnia
+177,Male,33,Engineer,9.3,5,50,3,Normal,118/78,70,3600,Hypersomnia
+178,Female,28,Engineer,9.7,5,50,2,Normal,112/72,66,3100,Hypersomnia
+179,Male,31,Engineer,9.5,5,50,3,Normal,117/76,69,3400,Hypersomnia
+180,Female,34,Engineer,9.8,5,50,2,Normal,110/70,65,3200,Hypersomnia

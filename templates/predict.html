@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Prediction - Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">Sleep Analysis</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict" class="active">Predict</a></li>
+                <li><a href="/analysis">Prediction Analysis</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Prediction Section -->
+    <section class="prediction-section">
+        <div class="prediction-container">
+            <div class="section-header fade-in">
+                <h1 class="section-title">Sleep Disorder Analysis</h1>
+                <p class="section-subtitle">Enter your health metrics for sleep disorder prediction</p>
+            </div>
+
+            <div class="glass-card fade-in-up">
+                <form id="predictionForm">
+                    <div class="form-grid">
+                        <!-- Age -->
+                        <div class="form-group">
+                            <label for="age" class="floating-label">Age</label>
+                            <input type="number" id="age" name="age" required min="1" max="120" class="form-input">
+                            <span class="input-icon">👤</span>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="form-group">
+                            <label for="gender" class="floating-label">Gender</label>
+                            <select id="gender" name="gender" required class="form-input">
+                                <option value="" disabled selected></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <span class="input-icon">⚧</span>
+                        </div>
+
+                        <!-- Sleep Duration -->
+                        <div class="form-group">
+                            <label for="sleep_duration" class="floating-label">Sleep Duration (hours)</label>
+                            <input type="number" id="sleep_duration" name="sleep_duration" required min="0" max="24"
+                                step="0.5" class="form-input">
+                            <span class="input-icon">😴</span>
+                        </div>
+
+                        <!-- Stress Level -->
+                        <div class="form-group">
+                            <label for="stress_level" class="floating-label">Stress Level (1-10)</label>
+                            <input type="number" id="stress_level" name="stress_level" required min="1" max="10"
+                                class="form-input">
+                            <span class="input-icon">😰</span>
+                        </div>
+
+                        <!-- Daily Steps -->
+                        <div class="form-group">
+                            <label for="daily_steps" class="floating-label">Daily Steps</label>
+                            <input type="number" id="daily_steps" name="daily_steps" required min="0"
+                                class="form-input">
+                            <span class="input-icon">🚶</span>
+                        </div>
+
+                        <!-- Heart Rate -->
+                        <div class="form-group">
+                            <label for="heart_rate" class="floating-label">Heart Rate (bpm)</label>
+                            <input type="number" id="heart_rate" name="heart_rate" required min="30" max="200"
+                                class="form-input">
+                            <span class="input-icon">❤️</span>
+                        </div>
+
+                        <!-- Systolic BP -->
+                        <div class="form-group">
+                            <label for="systolic_bp" class="floating-label">Systolic BP (mmHg)</label>
+                            <input type="number" id="systolic_bp" name="systolic_bp" required min="70" max="200"
+                                class="form-input">
+                            <span class="input-icon">📊</span>
+                        </div>
+
+                        <!-- Diastolic BP -->
+                        <div class="form-group">
+                            <label for="diastolic_bp" class="floating-label">Diastolic BP (mmHg)</label>
+                            <input type="number" id="diastolic_bp" name="diastolic_bp" required min="40" max="130"
+                                class="form-input">
+                            <span class="input-icon">📈</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-analyze">
+                        <span id="btnText">Analyze Sleep Pattern</span>
+                        <span id="btnLoader" class="loader" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Result Card (Hidden by default) -->
+            <div id="resultCard" class="result-card" style="display: none;">
+                <div class="result-header">
+                    <h2 class="result-title">Analysis Complete</h2>
+                    <div id="resultBadge" class="result-badge"></div>
+                </div>
+
+                <div class="result-body">
+                    <div class="result-prediction">
+                        <div class="prediction-label">Prediction:</div>
+                        <div id="predictionText" class="prediction-text"></div>
+                    </div>
+
+                    <div class="result-confidence">
+                        <div class="confidence-label">Confidence Level:</div>
+                        <div class="confidence-bar">
+                            <div id="confidenceProgress" class="confidence-progress"></div>
+                        </div>
+                        <div id="confidenceText" class="confidence-text"></div>
+                    </div>
+
+                    <!-- Risk Level Meter -->
+                    <div id="riskLevelSection" class="risk-level-section">
+                        <h3 class="risk-level-title">🎯 Overall Health Risk Assessment</h3>
+                        <div class="risk-meter-container">
+                            <div class="risk-meter">
+                                <div id="riskMeterFill" class="risk-meter-fill"></div>
+                            </div>
+                            <div class="risk-labels">
+                                <span class="risk-label-low">Low</span>
+                                <span class="risk-label-moderate">Moderate</span>
+                                <span class="risk-label-high">High</span>
+                                <span class="risk-label-critical">Critical</span>
+                            </div>
+                        </div>
+                        <div id="riskLevelBadge" class="risk-level-badge"></div>
+                    </div>
+
+                    <div class="result-suggestions">
+                        <h3 class="suggestions-title">Health Recommendations</h3>
+                        <ul id="suggestionsList" class="suggestions-list"></ul>
+                    </div>
+
+                    <!-- Health Risks Section (If Neglected) -->
+                    <div id="healthRisksSection" class="health-risks-section">
+                        <div class="health-risks-header">
+                            <h3 class="health-risks-title">⚠️ What Happens If You Neglect This?</h3>
+                            <p id="healthRisksSummary" class="health-risks-summary"></p>
+                        </div>
+                        <div id="healthRisksList" class="health-risks-list"></div>
+                    </div>
+
+                    <!-- Prediction Ranges Guide -->
+                    <div id="predictionRangesSection" class="prediction-ranges-section">
+                        <h3 class="ranges-title">📊 Disease Prediction Guide — Value Ranges</h3>
+                        <p class="ranges-subtitle">These parameter ranges indicate the typical thresholds for each sleep
+                            disorder</p>
+                        <div id="rangesGrid" class="ranges-grid"></div>
+                    </div>
+
+                    <!-- Sleep Duration Interpretation Guide -->
+                    <div id="durationGuideSection" class="duration-guide-section" style="display:none;">
+                        <h3 class="ranges-title">🕐 Sleep Duration Interpretation Guide</h3>
+                        <p class="ranges-subtitle">How your sleeping hours map to possible conditions</p>
+                        <div class="duration-table-wrapper">
+                            <table class="duration-table">
+                                <thead>
+                                    <tr>
+                                        <th>Sleep Hours</th>
+                                        <th>Possible Condition</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="durationTableBody"></tbody>
+                            </table>
+                        </div>
+                        <div class="key-notes-box">
+                            <h4 class="key-notes-title">📌 Key Notes</h4>
+                            <ul class="key-notes-list">
+                                <li>🟠 <strong>Sleep Apnea</strong> is determined primarily by <strong>breathing
+                                        interruptions</strong>, not just sleep duration.</li>
+                                <li>🔴 <strong>Insomnia</strong> can occur even if a person spends <strong>7–8 hours in
+                                        bed but cannot maintain deep sleep</strong>.</li>
+                                <li>🟡 <strong>Restless Legs Syndrome</strong> usually causes <strong>difficulty staying
+                                        asleep due to leg movement urges</strong>.</li>
+                                <li>🟣 <strong>Circadian Rhythm Disorders</strong> are related to <strong>sleep timing
+                                        misalignment with the biological clock</strong>.</li>
+                                <li>📊 Health indicators such as <strong>heart rate, blood pressure, BMI, and daily
+                                        activity</strong> help distinguish different sleep disorders.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button onclick="resetForm()" class="btn btn-secondary">New Analysis</button>
+                        <a href="/" class="btn btn-outline">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Analysis - Sleep Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .analysis-container {
+            max-width: 1200px;
+            margin: 100px auto 40px auto;
+            padding: 2rem;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .analysis-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .graph-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .graph-card {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .graph-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .graph-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .graph-card img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #00d4ff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .graph-card h3 {
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .graph-card p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">Sleep Analysis</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict">Predict</a></li>
+                <li><a href="/analysis" class="active">Prediction Analysis</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="analysis-container slide-in-bottom">
+        <div class="analysis-header">
+            <h1 class="gradient-text">Model Prediction Analysis</h1>
+            <p>Visual evaluation metrics for the Random Forest sleep disorder classification model on test data.</p>
+        </div>
+
+        <div class="graph-grid">
+            <div class="graph-card">
+                <h3>Confusion Matrix</h3>
+                <img src="{{ url_for('static', filename='confusion.png') }}" alt="Confusion Matrix">
+                <p>Displays the true labels versus the predicted labels to show classification performance and error
+                    types.</p>
+            </div>
+
+            <div class="graph-card">
+                <h3>Accuracy Graph</h3>
+                <img src="{{ url_for('static', filename='accuracy.png') }}" alt="Accuracy Graph">
+                <p>Shows the overall percentage of correct predictions made by the model.</p>
+            </div>
+
+            <div class="graph-card">
+                <h3>ROC Curve</h3>
+                <img src="{{ url_for('static', filename='roc.png') }}" alt="ROC Curve">
+                <p>Receiver Operating Characteristic curve visualizing the diagnostic ability for each class and overall
+                    true positive rate.</p>
+            </div>
+            
+            <div class="graph-card">
+                <h3>Feature Importance Chart</h3>
+                <img src="{{ url_for('static', filename='feature_importance.png') }}"
+                    onerror="this.onerror=null; this.parentElement.style.display='none';" alt="Feature Importance">
+                <p>Calculated Gini impurity tracking to identify which physiological variables most strongly dictate sleep classification.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
+    <script>
+        var modal = document.getElementById("imageModal");
+        var expandedImg = document.getElementById("expandedImg");
+
+        var imgs = document.querySelectorAll(".graph-card img");
+        imgs.forEach(function (img) {
+            img.onclick = function () {
+                modal.style.display = "block";
+                expandedImg.src = this.src;
+            }
+        });
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function (e) {
+            if (e.target !== expandedImg) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
